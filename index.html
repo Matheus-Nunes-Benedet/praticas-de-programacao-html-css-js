@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apresentação de alguns temas considerados boas práticas ao codar com HTML">
+    <meta name="keywords" content="HTML, CSS, JavaScript, JS, Boas Práticas, Programação">
+    <meta name="author" content="Matheus Nunes Benedet">
+    <link rel="stylesheet" href="assets/CSS/generalDefaultStyles.css">
+    <link rel="stylesheet" href="assets/CSS/HTMLPageStyles.css">
+    <title>Boas Práticas com HTML</title>
+</head>
+<body class="dark">
+
+    <!-- Project Cover -->
+    <header class="backgroundImage themeColorDark" id="title">
+        <h1>Boas Práticas com HTML</h1>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav class="blockColor" id="navBar">
+        <a href="#title">
+            <img src="assets/images/HTMLLogo.png" alt="Logo HTML">
+        </a>
+        <div id="rail" title="Interruptor para alterarnar o tema da página entre escuro e claro">
+            <div class="switch blockColor"></div>
+        </div>
+    </nav>
+
+    <!-- Navigation Section -->
+    <nav id="navSection">
+        <section id="topSection">
+            <a class="blockColor" href="">
+                <img src="assets/images/JSLogo.png" alt="Logo JavaScript">
+                <h2>Boas Práticas com JavaScript</h2>
+            </a>
+            <a class="blockColor" href="">
+                <img src="assets/images/CSSLogo.png" alt="Logo CSS">
+                <h2>Boas Práticas com CSS</h2>
+            </a>
+        </section>
+        <section id="bottomSection">
+            <ul class="blockColor">
+                <li class="blockColor"><a href="#doctype">DOCTYPE</a></li>
+                <li class="blockColor"><a href="#titulosInteligentes">Títulos Inteligentes</a></li>
+                <li class="blockColor"><a href="#metatags">Metatags</a></li>
+                <li class="blockColor"><a href="#CSS">CSS</a></li>
+                <li class="blockColor"><a href="#importacaoDoCSSEJS">Importação do CSS e JS</a></li>
+                <li class="blockColor"><a href="#atributosDeAcessibilidade">Atributos de Acessibilidade</a></li>
+                <li class="blockColor"><a href="#escritaAdequada">Escrita Adequada</a></li>
+                <li class="blockColor"><a href="#organizacaoDeFormularios">Organização de Formulários</a></li>
+                <li class="blockColor"><a href="#tagsSemanticas">Tags Semânticas</a></li>
+                <li class="blockColor"><a href="#compressao">Compressão</a></li>
+                <li class="blockColor"><a href="#validacao">Validação</a></li>
+                <li class="blockColor"><a href="#exemploDeUmHTMLBom">Exemplo de um HTML bom</a></li>
+            </ul>
+        </section>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <p class="blockColor blockFormat block900 blockCenter initialConsideration">As dicas mencionadas nesta página foram selecionadas pelo autor com base em pesquisas realizadas em artigos, vídeos e análises. Os textos e códigos foram elaborados e fundamentados na interpretação das pesquisas pelo autor e não abrangem todas as práticas existentes, apenas aquelas consideradas mais relevantes por ele. Portanto, algumas informações podem não estar totalmente corretas ou abrangentes. O objetivo desta página não é fornecer ensino formal, mas sim destacar as habilidades do autor em front-end e servir como referência para consultas posteriores.</p>
+
+        <!-- DOCTYPE Item -->
+        <section id="doctype" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockRight">DOCTYPE</h2>
+            <p class="blockColor blockFormat block900 blockRight">É fundamental incluir o elemento &lt;!DOCTYPE&gt; no início de seus documentos HTML. Embora não seja um elemento HTML em si, sua presença orienta o navegador sobre como interpretar o documento. Isso assegura o funcionamento adequado e a melhor interpretação do conteúdo pelo navegador.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block400 blockLeft">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="elementLock"></span>!<span class="tag">DOCTYPE</span> <span class="attribute">html</span>&gt;
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Títulos Inteligentes Item -->
+        <section id="titulosInteligentes" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockCenter">Títulos Inteligentes</h2>
+            <p class="blockColor blockFormat block900 blockRight">É recomendável atribuir um título significativo ao seu documento HTML. Utilize palavras-chave relevantes relacionadas ao conteúdo da página para facilitar sua localização através de buscas no navegador.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block400 blockLeft">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="tag">title</span>&gt;<span class="normalTxt">Título Inteligente</span>&lt;/<span class="tag">title</span>&gt;
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Metatags Item -->
+        <section id="metatags" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockLeft">Metatags</h2>
+            <p class="p1 blockColor blockFormat block900 blockCenter">É essencial dominar o uso das meta tags, pois desempenham um papel muito importante na configuração das páginas. Elas servem como parâmetros de configuração, permitindo que você indique ao navegador como a página deve se comportar. As meta tags são úteis para especificar detalhes como a forma como a página será compartilhada, fornecer informações sobre o conteúdo para programas externos e mecanismos de busca, entre outras funcionalidades.</p>
+            <p class="p2 blockColor blockFormat blockFit blockCenter">As três principais metatags para aprender sendo iniciante são:</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block1150 blockRight">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="tag">meta</span> <span class="attribute">charset=</span><span class="attributeTxt">”UTF-8”</span>&gt; <span class="annotation">&lt;!-- Serve para informar ao documento quais caracteres devem ser processados e exibidos, impedindo que as letras e caracteres especiais fiquem bagunçados ou inexistentes. --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">meta</span> <span class="attribute">name=</span><span class="attributeTxt">”viewport”</span> <span class="attribute">content=</span><span class="attributeTxt">”width=device-width, initial-scale=1.0”</span>&gt; <span class="annotation">&lt;!-- Serve para identificar que esse documento vai ser adaptado para diversos dispositivos, como computadores, tablets, smartphones, televisores, entre outros. --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">meta</span> <span class="attribute">name=</span><span class="attributeTxt">”description”</span> <span class="attribute">content=</span><span class="attributeTxt">”Descrição”</span>&gt; <span class="annotation">&lt;!-- Aqui você coloca uma breve descrição atraente para o conteúdo de sua página. Essa descrição será exibida abaixo do título ao buscar por sua página em um browser. --&gt;</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- CSS Item -->
+        <section id="CSS" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockLeft">CSS</h2>
+            <p class="blockColor blockFormat block900 blockLeft">O CSS desempenha o papel da estilização do conteúdo de uma página, contribuindo significativamente para a sua apresentação visual. Embora seja possível incluir estilos diretamente nas tags HTML usando o atributo 'style', essa prática não é recomendada de acordo com as boas práticas de programação. Em vez disso, é aconselhável manter o CSS em um documento separado. Isso promove códigos mais limpos, legíveis e bem organizados, facilitando a manutenção e a compreensão do código.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block1150 blockRight">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="tag">body</span> <span class="attribute">style=</span><span class="attributeTxt">”color: white”</span>&gt;&lt;/<span class="tag">body</span>&gt; <span class="annotation">&lt;!-- Não utilize dessa maneira! --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">link</span> <span class="attribute">rel=</span><span class="attributeTxt">”stylesheet”</span> <span class="attribute">href=</span><span class="attributeTxt">”enderecoDoDocumentoCSS”</span>&gt; <span class="annotation">&lt;!-- Importe o documento CSS para o HTML com essa tag. --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">body</span> <span class="attribute">class=</span><span class="attributeTxt">”classe”</span> <span class="attribute">id=</span><span class="attributeTxt">”id”</span>&gt;&lt;/<span class="tag">body</span>&gt; <span class="annotation">&lt;!-- Importe os estilos criados no documento CSS utilizando class ou id. --&gt;</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Importação do CSS e JS Item -->
+        <section id="importacaoDoCSSEJS" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockCenter">Importação do CSS e JS</h2>
+            <p class="p1 blockColor blockFormat block900 blockLeft">De acordo com diversos estudos, é considerado uma prática recomendada importar o CSS utilizando a tag &lt;link&gt; dentro da seção &lt;head&gt; do documento HTML. Essa abordagem tende a melhorar a performance e a renderização da página, uma vez que o documento CSS é processado simultaneamente com os componentes do HTML.</p>
+            <p class="p2 blockColor blockFormat block900 blockRight">Quanto ao JavaScript (JS), é aconselhável importá-lo utilizando a tag &lt;script&gt; antes do fechamento da tag &lt;/body&gt;. Essa prática também contribui para a melhoria da performance na renderização, uma vez que a página realizará o processamento do documento JS somente após a exibição dos elementos HTML.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block900 blockCenter">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="tag">head</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">link</span> <span class="attribute">rel=</span><span class="attributeTxt">"stylesheet"</span> <span class="attribute">href=</span><span class="attributeTxt">"enderecoDoDocumento.css"</span>&gt;
+                    </li>
+                    <li>
+                        &lt;/<span class="tag">head</span>&gt;
+                    </li>
+                    <li>
+                        &lt;<span class="tag">body</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">&lt;!-- Conteúdo --&gt;</span>
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">script</span> <span class="attribute">src=</span><span class="attributeTxt">"enderecoDoDocumento.js"</span>&gt;&lt;/<span class="tag">script</span>&gt;
+                    </li>
+                    <li>
+                        &lt;/<span class="tag">body</span>&gt;
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Atributos de Acessibilidade Item -->
+        <section id="atributosDeAcessibilidade" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockRight">Atributos de Acessibilidade</h2>
+            <p class="p1 blockColor blockFormat block900 blockLeft">É fundamental fazer uso dos atributos de acessibilidade disponíveis no HTML, pois eles auxiliam programas externos na identificação de conteúdos em nossas páginas, possibilitam uma melhor utilização de atalhos, como por exemplo, a tecla TAB, e permitem que pessoas com necessidades especiais desfrutem do conteúdo e das funcionalidades da página.</p>
+            <p class="p2 blockColor blockFormat blockFit blockCenter">Aqui estão alguns exemplos de atributos:</p>
+            <p class="p3 blockColor blockFormat block900 blockRight">alt: Este atributo destina-se a fornecer uma descrição ao elemento HTML em que é utilizado. Dessa forma, se o elemento em questão não for renderizado, a descrição estará presente no seu lugar. Outro benefício muito importante é a descrição do conteúdo da página para pessoas com deficiência visual, já que os leitores de tela não conseguem interpretar elementos como imagens ou gifs, mas podem ler as descrições.</p>
+            <p class="p4 blockColor blockFormat block400 blockLeft">title: Este atributo é comumente utilizado para fornecer informações de orientação sobre elementos HTML. Ele também é lido por leitores de tela.</p>
+            <p class="p5 blockColor blockFormat block400 blockCenter">tabindex: Este atributo determina a ordem de tabulação (foco) ao pressionar a tecla TAB. O tabindex é útil para definir a ordem desejada dos elementos em que o foco deve se deslocar.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block1150 blockCenter">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="tag">img</span> <span class="attribute">src=</span><span class="attributeTxt">"enderecoDaImagem.jpg"</span> <span class="attribute">alt=</span><span class="attributeTxt">"Descrição da imagem"</span>&gt; <span class="annotation">&lt;!-- Descrevendo uma imagem com o atributo alt --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">button</span> <span class="attribute">onclick=</span><span class="attributeTxt">"acao()"</span> <span class="attribute">title=</span><span class="attributeTxt">"Objetivo desse botão"</span>&gt;&lt;/<span class="tag">button</span>&gt; <span class="annotation">&lt;!-- Informando o objetivo do botão com o atributo title --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">a</span> <span class="attribute">href=</span><span class="attributeTxt">"enderecoDoLink.com"</span> <span class="attribute">tabindex=</span><span class="attributeTxt">"1"</span>&gt;&lt;/<span class="tag">a</span>&gt; <span class="annotation">&lt;!-- Definindo a prioridade do TAB para uma tag específica com o atributo tabindex --&gt;</span>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Escrita Adequada Item -->
+        <section id="escritaAdequada" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockLeft">Escrita Adequada</h2>
+            <p class="blockColor blockFormat block900 blockCenter">É importante que o seu código seja escrito da forma mais eficiente possível. Recomenda-se utilizar letras minúsculas ao declarar tags, métodos, atributos, entre outros elementos. Evite espaços desnecessários e excesso de linhas em branco. Organize o código com uma indentação apropriada. Embora os comentários sejam ferramentas úteis para identificar e documentar diferentes partes do código, é importante usá-los com moderação. Comentários em excesso podem dificultar a leitura e compreensão do código.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block900 blockRight">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        <span class="annotation">&lt;!-- Código incorreto --&gt;</span>
+                    </li>
+                    <li>
+                        &lt;<span class="tag">BODY</span> <span class="attribute">ID=</span><span class="attributeTxt">"id"</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">header</span> <span class="attribute">CLASS=</span><span class="attributeTxt">"classe1"</span>&gt;
+                    </li>
+                    <li>
+                        <span class="annotation">&lt;!-- Comentário muito extenso --&gt;</span>
+                    </li>
+                    <li>
+                        <span class="annotation">&lt;!-- Comentário desnecessário --&gt;</span>
+                    </li>
+                    <li></li>
+                    <li>
+                        &lt;<span class="tag">H1</span>&nbsp;&nbsp;&nbsp;&gt;&lt;/<span class="tag">H1</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">IMG</span> <span class="attribute">src=</span><span class="attributeTxt">"esderecoDaImagem"</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="attribute">ALT=</span><span class="attributeTxt">"Descrição da imagem"&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">header</span>&gt;
+                    </li>
+                    <li>
+                        &lt;/<span class="tag">body</span>&gt;
+                    </li>
+                    <li></li>
+                    <li>
+                        <span class="annotation">&lt;!-- Código correto --&gt;</span>
+                    </li>
+                    <li>
+                        &lt;<span class="tag">body</span> <span class="attribute">id=</span><span class="attributeTxt">"id"</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">header</span> <span class="attribute">class=</span><span class="attributeTxt">"classe1"</span>&gt;
+                    </li>
+                    <li></li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="annotation">&lt;!-- Comentário necessário --&gt;</span>
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">h1</span>&gt;&lt;/<span class="tag">h1</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">img</span> <span class="attribute">src=</span><span class="attributeTxt">"enderecoDaImagem"</span> <span class="attribute">alt=</span><span class="attributeTxt">"Descrição da imagem"</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">header</span>&gt;
+                    </li>
+                    <li>
+                        &lt;/<span class="tag">body</span>&gt;
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Organização de Formulários Item -->
+        <section id="organizacaoDeFormularios" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockLeft">Organização de Formulários</h2>
+            <p class="blockColor blockFormat block900 blockRight">Ao desenvolver em HTML, é comum lidar com uma variedade de formulários. Portanto, recomenda-se o uso frequente das tags &lt;fieldset&gt; e &lt;legend&gt;, que são responsáveis por agrupar e descrever o conteúdo do formulário. Além disso, é importante fazer uso das tags &lt;input&gt; e &lt;label&gt;, que trabalham em conjunto para identificar e organizar as áreas de interação com o usuário.</p>
+
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block900 blockCenter">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    <li>
+                        &lt;<span class="tag">form</span> <span class="attribute">action=</span><span class="attributeTxt">"acao1"</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">fieldset</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">legend</span>&gt;<span class="normalTxt">Legenda do Formulário 1</span>&lt;/<span class="tag">legend</span>&gt;
+                    </li>
+                    <li></li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for=</span><span class="attributeTxt">"inp1"</span>&gt;&lt;/<span class="tag">label</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type=</span><span class="attributeTxt">"text"</span> <span class="attribute">name=</span><span class="attributeTxt">"inp1"</span> <span class="attribute">id=</span><span class="attributeTxt">"inp1"</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">label</span> <span class="attribute">for=</span><span class="attributeTxt">"inp2"</span>&gt;&lt;/<span class="tag">label</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="tag">input</span> <span class="attribute">type=</span><span class="attributeTxt">"text"</span> <span class="attribute">name=</span><span class="attributeTxt">"inp2"</span> <span class="attribute">id=</span><span class="attributeTxt">"inp2"</span>&gt;
+                    </li>
+                    <li>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/<span class="tag">fieldset</span>&gt;
+                    </li>
+                    <li>
+                        &lt;/<span class="tag">form</span>&gt;
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Tags Semânticas Item -->
+        <section id="tagsSemanticas" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockRight">Tags Semânticas</h2>
+            <p class="blockColor blockFormat block900 blockCenter">Uma página web é composta por várias seções distintas, como cabeçalho, rodapé, barra de navegação, formulários, entre outras. Para manter o código bem organizado, é recomendável utilizar as tags apropriadas para cada parte da página. Embora existam diversas tags disponíveis para a organização semântica, não é necessário conhecer todas elas; basta dominar as mais básicas para obter uma estrutura eficiente.</p>
+        </section>
+
+        <!-- Compressão Item -->
+        <section id="compressao" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockLeft">Compressão</h2>
+            <p class="blockColor blockFormat block900 blockRight">Para otimizar o desempenho do seu site, é altamente recomendável comprimir o código HTML, tornando-o mais leve e, consequentemente, mais rápido. Você pode realizar essa compressão manualmente utilizando ferramentas online específicas ou de forma automatizada por meio de ferramentas como Gulp ou Webpack.</p>
+        </section>
+        
+        <!-- Validação Item -->
+        <section id="validacao" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockCenter">Validação</h2>
+            <p class="blockColor blockFormat block900 blockLeft">Após concluir o desenvolvimento do seu HTML, é essencial validar o código, verificando se ele está em conformidade com os padrões e buscando por alertas e erros para corrigi-los. Para facilitar essa tarefa e identificar possíveis problemas que passaram despercebidos, é recomendável utilizar a ferramenta Lighthouse do Google. Você pode acessá-la através do DevTools, pressionando o atalho 'F12'.</p>
+        </section>
+
+        <!-- Exemplo de um HTML bom Item -->
+        <section id="exemploDeUmHTMLBom" class="itemDisplay">
+            <h2 class="blockColor blockFormat blockFit blockRight">Exemplo de um HTML bom</h2>
+            <iframe src="" frameborder="0" class="blockColor blockFormat block1150 blockCenter"></iframe>
+    
+            <!-- Code Block -->
+            <div class="codeArea blockColor blockFormat block1150 blockCenter">
+                <div class="codeBlockHeader">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <ol class="codeBlock">
+                    <!-- Code Lines -->
+                    
+                </ol>
+            </div>
+        </section>
+    </main>
+    <script src="assets/JS/pageScript.js"></script>
+</body>
+</html>

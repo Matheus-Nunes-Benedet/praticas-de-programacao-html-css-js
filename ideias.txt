@@ -1,0 +1,64 @@
+Ideias gerais
+
+1. Seguir os padrões dos rascunhos criados para o design.
+2. Cabeçalho fixo no topo, permitindo navegação entre todos títulos secundários da Página.
+3. Animação CSS de entrada e saída dos elementos.
+4. Animar os códigos como se estivessem sendo escritos na hora.
+5. Criar um tema claro e um escuro com um botão fixo no cabeçalho.
+6. Criar um EasterEgg dourado, ele aparece em algum local aleatório da tela em um tamanho aleatório (nem muito pequeno, nem muito grande). Ele deve aparecer e desaparecer após um periodo de tempo aleatório. Ao clicar nele um som de brilho deve ser reproduzido e a página começa a mudar para um tema dourado. O tema dourado deve ficar por 2 minutos e voltar ao padrão, reiniciando o EsaterEgg. É possível remover o tema amarelo antes dos 2 minutos clicando no botão de mudar tema do cabeçalho.
+7. Criar pequenos detalhes hover em blocos de texto.
+
+Detalhes de cada setor da página:
+
+Setor 1:
+a. Titulo deve ter um efeito CSS flutuante, se movendo levemente e lentamente de um lado para o outro.
+
+Setor 2:
+a. Cabeçalho deve fixar no topo.
+b. Logo HTML deve levar de volta ao topo da página ao ser clicado.
+c. Caixas de texto devem ter um efeito de expansão com hover, se expandindo levemente.
+
+Setor 3:
+a. 
+
+
+
+Adicionar apenas uma classe nova ao body, fazendo com que todos os outros elementos mudem de criados. Assim o JS fica minusculo
+.body.light .themeColor {
+    cor clara
+}
+.body.dark .themeColor {
+    cor escura
+}
+
+
+
+
+
+
+Instruções para o Chat GPT auxiliar na criação das linhas HTML apresentadas na página
+
+Preciso de uma ajuda sua para agilizar um pouco o meu trabalho! Preciso exibir códigos HTML na tela do navegador com cores especificas para cada elemento. Para isso estou escrevendo cada linha do código em um <li> e separando as regiões que necessitam de cor utilizando <span> com uma classe especifica para cada cor de cada elemento HTML.
+
+As regras para criação de cada linha do código são:
+1. Os sinais de '<' e '>' presentes na linha do código devem ser substituídos respectivamente por '&lt;' e '&gt;';
+2. As tags devem ser escritas em um <span> porém os símbolos '<', '>' e '/' da tag devem ser inseridos fora do <span>. Por exemplo: <li>&lt;/<span>body</span>&gt;</li>;
+3. Os atributos devem ser inseridos junto ao símbolo de '=' no <span>. Por exemplo:  <li><span>class=</span></li>;
+4. Os textos dos atributos devem ser inseridos juntos as suas aspas em um <span>. Seguindo o princípio do exemplo do elemento 3, suponhamos que o atributo inteiro fosse "class='classe'", logo o texto do atributo deve ser adicionado assim: </span>'classe'</span>;
+5. Os textos 'normais' ou seja aqueles inseridos dentro de tags, devem ser inseridos em um <span>;
+6. Os comentários HTML devem ser inseridos em um <span>;
+7. Caso a linha de código tenha 2 espaços em branco ou mais seguidos, eles devem ser substituídos por '&nbsp;'. Por exemplo: "    <body> </body>" = <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span>body</span>&gt; &lt;/<span>body</span>&gt;</li>.
+
+Os elementos e suas respectivas classes são:
+1. Tags = .tag
+2. Atributos = .attribute
+3. Texto dos Atributos = .attributeTxt
+4. Textos normais = .normalTxt
+5. Comentários = .annotation
+
+Aqui vai um exemplo de como uma linha de código HTML foi criada:
+Linha a ser criada: "<meta name=”description” content=”Descrição”>  <!-- Aqui você coloca uma breve descrição atraente para o conteúdo de sua página. Essa descrição será exibida abaixo do título ao buscar por sua página em um browser. -->"
+
+Código criado: "<li>&lt;<span class="tag">meta</span> <span class="attribute">name=</span><span class="attributeTxt">”description”</span> <span class="attribute">content=</span><span class="attributeTxt">”Descrição”</span>&gt;&nbsp;&nbsp;<span class="annotation">&lt;!-- Aqui você coloca uma breve descrição atraente para o conteúdo de sua página. Essa descrição será exibida abaixo do título ao buscar por sua página em um browser. --&gt;</span></li>"
+
+Agora vou lhe enviar linhas para serem criadas e gostaria de me entregasse o código! Consegue?
