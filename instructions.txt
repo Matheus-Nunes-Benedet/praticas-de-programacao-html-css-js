@@ -1,0 +1,60 @@
+=====
+Instruções para o Chat GPT auxiliar na criação das linhas de código apresentadas na página
+=====
+=====
+Linhas HTML:
+=====
+
+Preciso de uma ajuda sua para agilizar um pouco o meu trabalho! Preciso exibir códigos HTML na tela do navegador com cores especificas para cada elemento. Para isso estou escrevendo cada linha do código em um <li> e separando as regiões que necessitam de cor utilizando <span> com uma classe especifica para cada cor de cada elemento HTML.
+
+As regras para criação de cada linha do código são:
+1. Os sinais de '<' e '>' presentes na linha do código devem ser substituídos respectivamente por '&lt;' e '&gt;';
+2. As tags devem ser escritas em um <span> porém os símbolos '<', '>' e '/' da tag devem ser inseridos fora do <span>. Por exemplo: <li>&lt;/<span>body</span>&gt;</li>;
+3. Os atributos devem ser inseridos junto ao símbolo de '=' no <span>. Por exemplo:  <li><span>class=</span></li>;
+4. Os textos dos atributos devem ser inseridos juntos as suas aspas em um <span>. Seguindo o princípio do exemplo do elemento 3, suponhamos que o atributo inteiro fosse "class='classe'", logo o texto do atributo deve ser adicionado assim: </span>'classe'</span>;
+5. Os textos 'normais' ou seja aqueles inseridos dentro de tags, devem ser inseridos em um <span>;
+6. Os comentários HTML devem ser inseridos em um <span>;
+7. Caso a linha de código tenha 2 espaços em branco ou mais seguidos, eles devem ser substituídos por '&nbsp;'. Por exemplo: "    <body> </body>" = <li>&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span>body</span>&gt; &lt;/<span>body</span>&gt;</li>.
+
+Os elementos e suas respectivas classes são:
+1. Tags = .tag
+2. Atributos = .attribute
+3. Texto dos Atributos = .attributeTxt
+4. Textos normais = .normalTxt
+5. Comentários = .annotation
+
+Aqui vai um exemplo de como uma linha de código HTML foi criada:
+Linha a ser criada: "<meta name=”description” content=”Descrição”>  <!-- Aqui você coloca uma breve descrição atraente para o conteúdo de sua página. Essa descrição será exibida abaixo do título ao buscar por sua página em um browser. -->"
+
+Código criado: "<li>&lt;<span class="tag">meta</span> <span class="attribute">name=</span><span class="attributeTxt">”description”</span> <span class="attribute">content=</span><span class="attributeTxt">”Descrição”</span>&gt;&nbsp;&nbsp;<span class="annotation">&lt;!-- Aqui você coloca uma breve descrição atraente para o conteúdo de sua página. Essa descrição será exibida abaixo do título ao buscar por sua página em um browser. --&gt;</span></li>"
+
+Agora vou lhe enviar linhas para serem criadas e gostaria de me entregasse o código! Consegue?
+
+=====
+Instructions for calculating the track lines
+=====
+
+To facilitate the code, the lines are created from the bottom and right borders of a <div> positioned absolutely with its right at (50% - half the border width) of the total width of the element and its bottom at (50% - half the border width) of the total height of the element. This way, we only need to calculate the top and left position of this <div> so that the borders create a path line connecting all elements. These lines will always extend to the left of the elements. For this reason, it may be necessary to flip them horizontally if the line needs to go to the other side.
+
+To calculate the top of the <div>, simply start at position 0 and subtract half the height of the previous element.
+- Formula = 0 - (height of the previous element) / 2
+
+To calculate the left of the <div>, we need to identify some factors to determine the correct formula to use.
+If the current element and the next element are aligned to the center, it is not necessary to calculate the left. However, if only the current element is in the center, the following formula should be used:
+- Formula = 0 - (width of the next element) / 2 - ((width of the Main) - (width of the current element)) / 2 + (width of the next element) - (border width) / 2
+
+If the current element and the next element are in the same alignment (other than center), it is necessary to check the width of both:
+If the current element is wider, use the following formula:
+- Formula = 0 + (width of the next element) / 2 - (border width) / 2
+
+If the current element is narrower, use the following formula:
+-Formula = 0 - (width of the next element) / 2 + (width of the current element) - (border width) / 2
+
+If the next element is aligned in the center and the current element in another alignment, use the following formula:
+- Formula = 0 - (width of the next element) / 2 - ((width of the Main) - (width of the current element)) + (width of the next element) + ((width of the Main) - (width of the next elements)) / 2 - (width of the current element) / 2
+
+If one element is aligned at the beginning and the other at the end, use the following formula:
+-Formula = 0 - (width of the next element) / 2 - ((width of the Main) - (width of the current element)) + (width of the next element) - (width of the current element) / 2
+
+To determine if the <div> should be horizontally flipped, we need to identify some factors. By default, the <div> already has the origin point set correctly so that it can be flipped while keeping the right border in the same position. Let's define an alignment order (beginning, center, end).
+If the next element is aligned in a position that comes respectively after the alignment of the current element, or both are aligned at the end and the current element is wider, or both are aligned at the beginning and the current element is narrower, the <div> should be flipped.

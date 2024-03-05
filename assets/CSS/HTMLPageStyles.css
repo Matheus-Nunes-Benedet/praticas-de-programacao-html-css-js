@@ -1,10 +1,18 @@
-/* Header Image */
+/*
+=====
+Header Image
+=====
+*/
 
 .backgroundImage {
     background-image: url(../images/HTMLCode.jpeg);
 }
 
-/* Code Block Line Colors */
+/*
+=====
+Code Block Line Colors
+=====
+*/
 
 body.dark .tag {
     color: #3577db;
@@ -46,100 +54,32 @@ body.light .annotation {
     color: #1db0b0;
 }
 
-/* Main Content */
+/* 
+=====
+Minimum Width for .codeBlock Overflow
+=====
+*/
 
-.initialConsideration {}
+#metatags .codeBlock {
+    min-width: 45rem;
+}
 
-/* DOCTYPE Item */
+#CSS .codeBlock {
+    min-width: 38.889rem;
+}
 
-#doctype h2 {}
+#importacaoDoCSSEJS .codeBlock {
+    min-width: 32.223rem;
+}
 
-#doctype p {}
+#atributosDeAcessibilidade .codeBlock {
+    min-width: 43.62rem;
+}
 
-#doctype .codeArea {}
+#escritaAdequada .codeBlock {
+    min-width: 36.667rem;
+}
 
-/* Títulos Inteligentes Item */
-
-#titulosInteligentes h2 {}
-
-#titulosInteligentes p {}
-
-#titulosInteligentes .codeArea {}
-
-/* Metatags Item */
-
-#metatags h2 {}
-
-#metatags .p1 {}
-
-#metatags .p2 {}
-
-#metatags .codeArea {}
-
-/* CSS Item */
-
-#CSS h2 {}
-
-#CSS p {}
-
-#CSS .codeArea {}
-
-/* Importação do CSS e JS Item */
-
-#importacaoDoCSSEJS h2 {}
-
-#importacaoDoCSSEJS p.p1 {}
-
-#importacaoDoCSSEJS p.p2 {}
-
-#importacaoDoCSSEJS .codeArea {}
-
-/* Atributos de Acessibilidade Item */
-
-#atributosDeAcessibilidade h2 {}
-
-#atributosDeAcessibilidade p.p1 {}
-
-#atributosDeAcessibilidade p.p2 {}
-
-#atributosDeAcessibilidade p.p3 {}
-
-#atributosDeAcessibilidade p.p4 {}
-
-#atributosDeAcessibilidade p.p5 {}
-
-#atributosDeAcessibilidade .codeArea {}
-
-/* Escrita Adequada Item */
-
-#escritaAdequada h2 {}
-
-#escritaAdequada p {}
-
-#escritaAdequada .codeArea {}
-
-/* Organização de Formulários Item */
-
-#organizacaoDeFormularios h2 {}
-
-#organizacaoDeFormularios p {}
-
-#organizacaoDeFormularios .codeArea {}
-
-/* Tags Semânticas Item */
-
-#tagsSemanticas h2 {}
-
-#tagsSemanticas p {}
-
-/* Compressão Item */
-
-#compressao h2 {}
-
-#compressao p {}
-
-/* Validação Item */
-
-#validacao h2 {}
-
-#validacao p {}
+#organizacaoDeFormularios .codeBlock {
+    min-width: 27.222rem;
+}

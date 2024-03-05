@@ -1,0 +1,85 @@
+@media screen and (max-width: 750px) {
+    /*
+    ======
+    General Styles
+    ======
+    */
+    
+    html {
+        scroll-behavior: smooth;
+        font-size: 1rem;
+    }
+
+    main {
+        margin: 0px 15px;
+    }
+
+    /*
+    ======
+    Header
+    ======
+    */
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    /*
+    ======
+    Navigation Section
+    ======
+    */
+
+    #navSection {
+        margin: 35px 15px 0 15px;
+    }
+
+    #topSection {
+        grid-template-columns: auto;
+        grid-row-gap: 15px;
+    }
+
+    #topSection a {
+        min-width: auto;
+        height: 45px;
+        padding: 15px 10px;
+        border-radius: 8px;
+    }
+
+    #bottomSection {
+        margin: 35px 0 0 0;
+    }
+    
+    #bottomSection ul {
+        border-radius: 8px;
+        grid-template-columns: auto;
+    }
+
+    #bottomSection li {
+        border-radius: 6px;
+        min-width: auto;
+    }
+
+    /*
+    ======
+    Item Blocks
+    ======
+    */
+
+    .trackLine {
+        border: 10px solid;
+        border-width: 0px 10px 10px 0px;
+        right: calc(50% - 5px);
+        bottom: calc((100% - 55px) / 2 - 5px);
+        transform-origin: calc(100% - 5px);
+    }
+
+    .blockFormat {
+        border-radius: 8px;
+        margin: 55px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+}

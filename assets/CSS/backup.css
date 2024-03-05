@@ -1,10 +1,4 @@
-/*
-======
-This page was created based on the resolution of a Full HD screen
-======
-Page Scrollbar
-======
-*/
+/* Scrollbar */
 
 body::-webkit-scrollbar {
     width: 12px;
@@ -32,11 +26,7 @@ body.light::-webkit-scrollbar-thumb {
     border: 3px solid #A1A1F5;
 }
 
-/*
-======
-General Styles
-======
-*/
+/* General Styles */
 
 html {
     scroll-behavior: smooth;
@@ -47,22 +37,12 @@ body {
     margin: 0px;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-}
-
-body.dark {
-    background-color: #32326A;
-}
-
-body.light {
-    background-color: white;
 }
 
 main {
-    margin: 0px 100px;
-    width: -webkit-fill-available;
-    max-width: 1600px;
-    align-self: center;
+    margin: 0 100px;
+    display: flex;
+    flex-direction: column;
 }
 
 a {
@@ -78,15 +58,7 @@ h2, p, li {
     transition: .3s;
 }
 
-#topSection a:hover, #navBar img:hover, #rail:hover .switch, #navSection li:hover {
-    filter: brightness(0.7);
-}
-
-/*
-======
-Header
-======
-*/
+/* Header */
 
 header {
     height: 100vh;
@@ -107,14 +79,9 @@ header h1 {
     font-family: sans-serif;
     font-size: 3.5rem;
     text-align: center;
-    margin: 20px;
 }
 
-/*
-======
-Navigation Bar
-======
-*/
+/* Navigation Bar */
 
 #navBar {
     height: 50px;
@@ -132,7 +99,6 @@ Navigation Bar
     cursor: pointer;
     transition: .3s;
     height: -webkit-fill-available;
-    width: 50px;
 }
 
 #rail {
@@ -140,14 +106,6 @@ Navigation Bar
     border-radius: 50px;
     position: relative;
     cursor: pointer;
-}
-
-body.dark #rail {
-    background-color: #32326A;
-}
-
-body.light #rail {
-    background-color: white;
 }
 
 .switch {
@@ -163,15 +121,11 @@ body.light .switch {
     left: 50px;
 }
 
-/*
-======
-Navigation Section
-======
-*/
+/* Navigation Section */
 
 #navSection {
-    width: -webkit-fill-available;
     max-width: 1600px;
+    width: 100%;
     align-self: center;
     margin: 50px 100px 0 100px;
 }
@@ -238,67 +192,26 @@ body.light #bottomSection li {
     font-weight: 600;
 }
 
-/*
-======
-Item Blocks
-======
-*/
+/* Item Blocks */
 
 .itemDisplay {
     display: flex;
     flex-direction: column;
 }
 
-.boxForTrackLine {
-    position: relative;
-    width: 100%;
-}
-
-.trackLine {
-    content: "";
-    border: 14px solid;
-    border-width: 0px 14px 14px 0px;
-    position: absolute;
-    right: calc(50% - 7px);
-    bottom: calc((100% - 75px) / 2 - 7px);
-    transform-origin: calc(100% - 7px);
-    transition: left .3s, top .3s, border .3s;
-    z-index: -1;
-}
-
-body.dark .trackLine{
-    border-color: #90EBFF;
-}
-
-body.light .trackLine{
-    border-color: black;
-}
-
 .blockFormat {
-    width: 100%;
-    border-radius: 15px;
-    padding: 20px;
+    border-radius: 25px;
+    padding: 25px;
     margin: 75px 0 0 0;
     text-align: justify;
-    box-sizing: border-box;
-}
-
-body.dark .blockColor {
-    background-color: #0B0B3C;
-    color: #90EBFF;
-}
-
-body.light .blockColor {
-    background-color: #A1A1F5;
-    color: black;
 }
 
 .blockFit {
     max-width: fit-content;
 }
 
-.block610 {
-    max-width: 610px;
+.block400 {
+    max-width: 400px;
 }
 
 .block900 {
@@ -321,62 +234,45 @@ body.light .blockColor {
     align-self: end;
 }
 
-.blockEnterLeft {
-    animation: appearLeft 1ms cubic-bezier(0.4, 0, 1, 1);;
-    animation-timeline: view();
-    animation-range: cover 0% cover 25%;
+/* Page Theme Colors - Start */
+
+body.dark {
+    background-color: #32326A;
 }
 
-@keyframes appearLeft {
-    from {
-        opacity: 0;
-        translate: -5vw 0;
-    }
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+body.light {
+    background-color: white;
 }
 
-.blockEnterCenter {
-    animation: appearCenter 1ms cubic-bezier(0.4, 0, 1, 1);;
-    animation-timeline: view();
-    animation-range: cover 0% cover 25%;
+body.dark .blockColor {
+    background-color: #0B0B3C;
+    color: #90EBFF;
 }
 
-@keyframes appearCenter {
-    from {
-        opacity: 0;
-        transform: scale(0.7);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+body.light .blockColor {
+    background-color: #A1A1F5;
+    color: black;
 }
 
-.blockEnterRight {
-    animation: appearRight 1ms cubic-bezier(0.4, 0, 1, 1);;
-    animation-timeline: view();
-    animation-range: cover 0% cover 25%;
+body.dark #rail {
+    background-color: #32326A;
 }
 
-@keyframes appearRight {
-    from {
-        opacity: 0;
-        translate: 5vw 0;
-    }
-    to {
-        opacity: 1;
-        translate: 0 0;
-    }
+body.light #rail {
+    background-color: white;
 }
 
-/*
-======
-Code Block
-======
-*/
+/* Hover Styles */
+
+#topSection a:hover, #navBar img:hover, #rail:hover .switch, #navSection li:hover {
+    filter: brightness(0.7);
+}
+
+/* Page Theme Color - End */
+
+/* Code Block - Start */
+
+/* Structure Styles */
 
 .codeBlockHeader {
     height: 35px;
@@ -384,14 +280,6 @@ Code Block
     border-radius: 25px 25px 0 0;
     display: flex;
     align-items: center;
-}
-
-body.dark .codeBlockHeader {
-    background-color: black;
-}
-
-body.light .codeBlockHeader {
-    background-color: #535353;
 }
 
 .codeBlockHeader div {
@@ -413,16 +301,28 @@ body.light .codeBlockHeader {
     background-color: #41E56A;
 }
 
-.overflowCode {
-    overflow-x: auto;
-}
-
 .codeBlock {
     color: #666666;
-    line-height: 1.28rem;
     margin: 0;
-    padding: 10px 10px 10px 2.5rem;
+    padding: 4px 10px 10px 40px;
     border-radius: 0 0 10px 10px;
+}
+
+/* Line Styles */
+
+.codeBlock li {
+    margin: 3px 0;
+    text-align: left;
+}
+
+/* Structure Colors */
+
+body.dark .codeBlockHeader {
+    background-color: black;
+}
+
+body.light .codeBlockHeader {
+    background-color: #535353;
 }
 
 body.dark .codeBlock {
@@ -433,28 +333,4 @@ body.light .codeBlock {
     background-color: #edecd6;
 }
 
-.overflowCode::-webkit-scrollbar {
-    height: 10px;
-}
-
-.overflowCode::-webkit-scrollbar-track {
-    background: transparent;
-}
-  
-.overflowCode::-webkit-scrollbar-thumb {
-    border-radius: 5px;
-}
-  
-body.dark .overflowCode::-webkit-scrollbar-thumb {
-    background-color: #32326A;
-    border: 3px solid #0B0B3C;
-}
-  
-body.light .overflowCode::-webkit-scrollbar-thumb {
-    background-color: white;
-    border: 3px solid #A1A1F5;
-}
-
-.codeBlock li {
-    text-align: left;
-}
+/* Code Block - End */
