@@ -123,7 +123,9 @@ function generateTrackLines() {
 // =====
 
 let timer = null;
+let reloadCount = 0;
 
+// If this function is called before the previous call is executed, the previous call will be canceled
 function executionControl() {
     if (timer !== null) {
         clearTimeout(timer);
@@ -133,6 +135,8 @@ function executionControl() {
         generateTrackLines();
 
         taskID = null;
+        // Reload the page after five or more executions of this function so that the page does not overload
+        reloadCount >= 5 ? location.reload() : reloadCount++;
     }, 200);
 };
 
