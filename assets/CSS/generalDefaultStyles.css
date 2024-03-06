@@ -95,7 +95,8 @@ header {
     justify-content: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: cover; 
+    background-position: 20%;
 }
 
 header h1 {
@@ -160,7 +161,7 @@ body.light #rail {
 }
 
 body.light .switch {
-    left: 50px;
+    left: 50%;
 }
 
 /*
@@ -236,6 +237,7 @@ body.light #bottomSection li {
 #bottomSection a {
     font-size: 1.222rem;
     font-weight: 600;
+    width: 100%;
 }
 
 /*
